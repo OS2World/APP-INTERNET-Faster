@@ -1,0 +1,27 @@
+## Makefile for Watcom C
+## Compiling for OS/2
+
+CC=wcc386
+LINK=wlink
+
+LFLAGS=sys os2v2 op st=8192 
+CFLAGS=/5r /fp5 /mf /zp2 /oneatxilr /bt=os2
+
+O=obj
+
+## variables
+OBJS = faster.$(O)
+
+LINKOBJS = faster.$(O)
+
+BINNAME=faster.exe
+
+
+.c.obj:
+	$(CC) $(CFLAGS) $*.c 
+
+.c.exe:
+	$(CC) $(CFLAGS) $*.c
+
+$(BINNAME): $(LINKOBJS)
+        $(LINK) $(LFLAGS) NAME $(BINNAME) FILE $(OBJS) 

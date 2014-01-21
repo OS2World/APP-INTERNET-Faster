@@ -1,0 +1,128 @@
+     Faster 1.0
+     Copyright (C) 1996 Ching-Chih (Oscar) Chang
+     All Rights Reserved
+     
+     email:oscar.chang@rahul.net
+
+=============================================================================
+                      Legal Notice and Use Policy
+=============================================================================
+
+     You may use this program freely, recompile it for  other  platforms
+     or  alter it to your liking.  I do *require* you to state that I am
+     the original author of this program.
+     
+     As a courtesy, please  send  me  an  email about the changes you've
+     made or if you've ported this program  to  another  platform.   The
+     makefile   you  write  for  your  platform  can  be  added  to  the
+     distribution source.
+
+     This program is distributed in the hope that it will be useful, but
+     WITHOUT  ANY  WARRANTY;  without   even  the  implied  warranty  of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+     In other words, use this  at  your  own risk.  I am not responsible
+	 for any or all damages that may come from the use of this program.
+
+     (  Don't you just love legal mumbo jumbo?  Oh well it keeps my butt
+	 out of jail.  :) )
+
+=============================================================================
+                           Function of Faster
+=============================================================================
+
+  	 Faster is designed to make your web pages load up...well faster. :)
+
+     It's done by adding the WIDTH and HEIGHT components to the IMG tag.
+
+     By  doing  this,  a  graphical  web browser will know the width and
+	 height of an image, put a  place holder there, and continue loading
+	 the page.  This makes the page load faster because the browser will
+	 know the size of the image  without  loading  the  actual  graphics
+	 file.
+
+     NOTE: If you find this utility useful, please drop me an email at
+	 oscar.chang@rahul.net, I'd love to hear from you.
+
+=============================================================================
+                           How to use Faster
+=============================================================================
+
+     Usage:
+     	faster <options> <wildcards> ...
+
+     Options:
+     	-h or -? 	Will load the help screen explaining all the options
+
+     	-u          Uppercase: All the width and height tags added
+     	            will be in uppercase letters.
+
+     	-l          Lowercase: all the width and height tags added
+     	            will be in lower case letters. *Default*
+
+     	-b          Backup: A copy of the original files will be made 
+		            before it is processed.
+
+     	-r          Recurse: Recurse into the subdirectories.
+
+     	-d          Delete: Delete all the WIDTH and HEIGHT components
+		            without adding new ones.
+
+Examples:
+
+     faster *.html
+
+     This will process all the files in the current directory that ends
+     in an .html
+
+     faster *.html *.shtml
+
+     This will process all the files in the current directory that ends 
+     in .html and then .shtml.
+
+     faster -r *.html *.shtml
+
+     This will process all the files ending in .html and *.shtml in the 
+     current directory and its subdirectories.
+
+=============================================================================
+                           Additional Goodies
+=============================================================================
+
+     I did add a function where if the hard  disk  runs  out  of  space,
+	 Faster  will  ask you for an alternate path to save your html file.
+	 However, this has not been tested, but, it should work.  :)
+
+     When using the -b  option  and  Faster  is  backing up files, if an
+     error occurs (most likely from running out of disk  space),  Faster
+     will  ask  you  if  you'd  like  to continue or quit.  If your in a
+     multitasking environment you can clear some disk space  for  Faster
+     to continue.
+
+=============================================================================
+                          Supported Platforms
+=============================================================================
+
+     Official Platforms Supported
+	 	OS/2 2.0 and higher (32-bit)
+		MS/PC DOS 5 and higher (16-bit)
+
+     Note:   If you have ported Faster to another platform, please email
+	 me and I can  make  the  makefile  available  along with the source
+	 distribution.  If you only have the binary please tell me where  it
+	 is  located  and  I  will  put  the location in this section of the
+	 documentation.
+
+=============================================================================
+                               Known Bugs
+=============================================================================
+
+     The  DOS version of Faster will not work with the long filenames of
+	 Win95.  An unofficial Win95 version should be out soon.
+
+=============================================================================
+                                History
+=============================================================================
+
+      09/13/96      1.0 released to the general public.
+	                Yes I know, it's Friday the 13th, muhahahahahah!! :)

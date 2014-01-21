@@ -1,0 +1,27 @@
+## Makefile for Watcom C
+## Compiling for DOS
+
+CC=wcc
+LINK=wlink
+
+LFLAGS=sys dos op st=8192 
+CFLAGS=/bt=dos /fp5 /oneatxilr 
+
+O=obj
+
+## variables
+OBJS = faster.$(O)
+
+LINKOBJS = faster.$(O)
+
+BINNAME=faster16.exe
+
+
+.c.obj:
+	$(CC) $(CFLAGS) $*.c 
+
+.c.exe:
+	$(CC) $(CFLAGS) $*.c
+
+$(BINNAME): $(LINKOBJS)
+        $(LINK) $(LFLAGS) NAME $(BINNAME) FILE $(OBJS) 
